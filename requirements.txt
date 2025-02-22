@@ -1,0 +1,6 @@
+allure_python_commons==2.13.2
+jsonpath_ng==1.6.1
+pytest==7.4.4
+PyYAML==6.0.2
+Requests==2.32.3
+allure-pytest==2.13.2
