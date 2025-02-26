@@ -7,9 +7,9 @@ import pytest
 
 if __name__ == "__main__":
     # 用于本地调试
-    # pytest.main()
-    # time.sleep(3)
-    # os.system("allure generate ./allure-results -o ./reports --clean")
+    pytest.main()
+    time.sleep(3)
+    os.system("allure generate ./allure-results -o ./reports --clean")
 
     # 用于集成jenkins
-    pytest.main(["--alluredir=./allure-results"])  # 仅生成原始数据，不调用 allure generate
+    # pytest.main(["--alluredir=./allure-results"])  # 仅生成原始数据，不调用 allure generate

@@ -1,5 +1,6 @@
 # @Time : 2025/2/9 14:40
 # @Author : luoxin
+import random
 
 import pytest
 import allure
@@ -29,6 +30,7 @@ def test_1():
 def test_2(ccc):  # 此种使用夹具的方法可将夹具的返回值直接给测试用例使用
     assert 1 == 1
 
-
-# def test_3(get_env):
-#     assert get_env == "prod"
+# 执行重试3次，每个延迟2s
+@pytest.mark.flaky(retries=3,delay=2)
+def test_3():
+    assert random.choice([True, False])  # 随机生成失败或成功
